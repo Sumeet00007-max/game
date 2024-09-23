@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="header">
+      <h1>ROCK PAPER SCISSORS</h1>
+    </div>
+    <div id="score-display">
+      <div id="computer-score">Computer Score: <span id="computer-score-val">0</span></div>
+      <div id="player-score">Your Score: <span id="player-score-val">0</span></div>
+    </div>
+     <!-- Joints (connecting lines) -->
+     <svg height="300" width="300" class="svg-lines">
+      <line x1="150" y1="50" x2="50" y2="250" style="stroke:gray;stroke-width:2" />
+      <line x1="150" y1="50" x2="250" y2="250" style="stroke:gray;stroke-width:2" />
+      <line x1="50" y1="250" x2="250" y2="250" style="stroke:gray;stroke-width:2" />
+  </svg>
+    <div id="result-container" style="display:none;">
+      <div id="choices-container">
+        <div id="player-picked" class="choice-circle"></div>
+        <div id="result-display" class="result-message"></div>
+        <div id="pc-picked" class="choice-circle"></div>
+      </div>
+
+      <button id="play-again-btn" style="display:none;">Play Again</button>
+    </div>
+    <div id="options-container">
+      <div id="rock-paper-scissors-circles">
+        <button id="rock" class="option-circle">✊</button>
+        <button id="paper" class="option-circle">✋</button>
+        <button id="scissors" class="option-circle">✌</button>
+      </div>
+    </div>
+    <div id="rules-section">
+      <button id="rules-btn">Rules</button>
+      <div id="rules-popup" class="popup">
+        <p>Game Rules:</p>
+        <ul>
+          <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+          <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+          <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+        <button id="close-rules-btn">Close</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
